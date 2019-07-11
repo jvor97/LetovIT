@@ -4,96 +4,135 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="css/style.css" />
     <title>Travelvio</title>
   </head>
 
   <body>
-    <!----------- HEADER --------->
-    <header>
-      <h2>Post me !</h2>
-      <form action="post">
-        <label for="title"></label>
-        <input type="text" name="title" placeholder="Title" /> <br />
-        <label for="message" pl></label>
-        <textarea
-          name="message"
-          id="message"
-          cols="30"
-          rows="10"
-          placeholder="What is in your mind ?"
-        ></textarea
-        ><br />
-        <label for="category">Category</label>
-        <select name="category" id="category">
-          <option value="Eu" label="Europe"></option>
-          <option value="Asia" label="Asia"></option>
-          <option value="US" label="America"></option>
-          <option value="Aus" label="Australia"></option>
-          <option value="Afr" label="Africa"></option> </select
-        ><br />
-        <label for="image"></label>
-        <input type="image" name="image" />
-        <label for="file"></label>
-        <input type="file" name="file" /><br />
-        <label for="submit"></label>
-        <input type="submit" name="submit" value="submit" />
-      </form>
-    </header>
+    <!----------- ASIDE --------->
+    <aside>
+      <h2>Aside</h2>
+      <p>jiejnknrejknjernjknekjnjkvnen rfnkjrn fjknwrjf jnfjrjnr</p>
+    </aside>
 
-    <!----------- TIMELINE --------->
-    <section class="timeline">
-      <div class="post">
-        <div class="main-post">
-          <img src="http://lorempixel.com/80/70/people/" alt="profile-photo" />
-          <a href="#" class="user-name"><strong>User name</strong></a>
-          <h2>Lorem ipsum</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsam
-            cumque mollitia facilis. Odio a debitis eligendi molestias id vero
-            ipsa iusto veniam dicta, obcaecati, iste vel esse officia ad!
-          </p>
-          <div class="category">Europe</div>
-          <span>Love it!</span>
-          <span>Comment</span>
-        </div>
-        <div class="comments">
-          <img src="http://lorempixel.com/80/70/people/" alt="profile-photo" />
-          <a href="#" class="user-name"><strong>User name</strong></a>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-        </div>
-      </div>
+    <!----------- SITE --------->
+    <main>
+      <section>
+        <form action="post" class="postme">
+          <h2>Post me !</h2>
+          <div class="form-el">
+            <label for="title"></label>
+            <input type="text" name="title" placeholder="Title" /> <br />
+          </div>
+          <div class="form-el">
+            <label for="message" pl></label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="5"
+              placeholder="What is in your mind ?"
+            ></textarea>
+          </div>
+          <div class="form-el">
+            <label for="category">Category</label>
+            <select name="category" id="category">
+              <option value="Eu" label="Europe"></option>
+              <option value="Asia" label="Asia"></option>
+              <option value="US" label="America"></option>
+              <option value="Aus" label="Australia"></option>
+              <option value="Afr" label="Africa"></option>
+            </select>
+          </div>
+          <div class="form-el">
+            <label for="image"></label>
+            <input type="image" name="image" />
+            <label for="file"></label>
+            <input type="file" name="file" />
+          </div>
+          <div class="form-el">
+            <label for="submit"></label>
+            <input type="submit" name="submit" value="Submit" id="btn" />
+          </div>
+        </form>
+      </section>
 
-      <div class="post">
-        <div class="main-post">
-          <img src="http://lorempixel.com/80/70/people/" alt="profile-photo" />
-          <a href="#" class="user-name"><strong>User name</strong></a>
-          <h2>Lorem ipsum</h2>
-          <img src="http://lorempixel.com/400/200/travel/" alt="travel-photo" />
-          <div class="category">Asia</div>
-          <span>Love it!</span>
-          <span>Comment</span>
-        </div>
-      </div>
+      <!----------- TIMELINE --------->
+      <section class="timeline">
+        <h2>Timeline</h2>
+        <article class="post">
+          <div class="main-post">
+            <img
+              src="http://lorempixel.com/80/70/people/"
+              alt="profile-photo"
+            />
+            <a href="#" class="user-name"><strong>User name</strong></a>
+            <h2>Lorem ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsam
+              cumque mollitia facilis. Odio a debitis eligendi molestias id vero
+              ipsa iusto veniam dicta, obcaecati, iste vel esse officia ad!
+            </p>
+            <div class="category">Europe</div>
+            <span>Love it!</span>
+            <span>Comment</span>
+          </div>
+          <div class="comments">
+            <img
+              src="http://lorempixel.com/80/70/people/"
+              alt="profile-photo"
+            />
+            <a href="#" class="user-name"><strong>User name</strong></a>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+        </article>
 
-      <div class="post">
-        <div class="main-post">
-          <img src="http://lorempixel.com/80/70/people/" alt="profile-photo" />
-          <a href="#" class="user-name"><strong>User name</strong></a>
-          <h2>Lorem ipsum</h2>
-          <img src="http://lorempixel.com/400/200/travel/" alt="travel-photo" />
-          <div class="category">America</div>
-          <span>Love it!</span>
-          <span>Comment</span>
-        </div>
-        <div class="comments">
-          <img src="http://lorempixel.com/80/70/people/" alt="profile-photo" />
-          <a href="#" class="user-name"><strong>User name</strong></a>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem
-            ipsum dolor sit amet consectetur.
-          </p>
-        </div>
-      </div>
-    </section>
+        <article class="post">
+          <div class="main-post">
+            <img
+              src="http://lorempixel.com/80/70/people/"
+              alt="profile-photo"
+            />
+            <a href="#" class="user-name"><strong>User name</strong></a>
+            <h2>Lorem ipsum</h2>
+            <img src="http://lorempixel.com/400/200/city/" alt="travel-photo" />
+            <div class="category">Asia</div>
+            <span>Love it!</span>
+            <span>Comment</span>
+          </div>
+        </article>
+
+        <article class="post">
+          <div class="main-post">
+            <img
+              src="http://lorempixel.com/80/70/people/"
+              alt="profile-photo"
+            />
+            <a href="#" class="user-name"><strong>User name</strong></a>
+            <h2>Lorem ipsum</h2>
+            <img src="http://lorempixel.com/400/200/city/" alt="travel-photo" />
+            <div class="category">America</div>
+            <span>Love it!</span>
+            <span>Comment</span>
+          </div>
+          <div class="comments">
+            <img
+              src="http://lorempixel.com/80/70/people/"
+              alt="profile-photo"
+            />
+            <a href="#" class="user-name"><strong>User name</strong></a>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem
+              ipsum dolor sit amet consectetur.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div>This page was created during Leto v IT course.</div>
+    </footer>
   </body>
 </html>

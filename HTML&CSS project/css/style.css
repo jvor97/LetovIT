@@ -1,0 +1,65 @@
+/*******MAIN ELEMENTS********/
+
+* {
+  font-size: 1em;
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+  box-sizing: border-box;
+}
+main {
+  width: 80%;
+  float: left;
+}
+aside {
+  width: 17%;
+  display: inline-block;
+  float: left;
+  word-break: break-word;
+  margin-right: 3%;
+}
+
+footer {
+  background-color: rgb(59, 59, 59);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+#btn {
+  width: 10%;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+.postme {
+  width: 100%;
+  margin: 0 auto;
+  background: blue;
+  padding: 1%;
+}
+
+.form-el {
+  width: 100%;
+  margin-top: 10px;
+}
+.postme textarea,
+select,
+input[type="text"] {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgb(219, 219, 219);
+  padding: 7px;
+}
+.postme select {
+  width: 30%;
+  margin-left: 3%;
+}
+.postme input[type="file"] {
+  margin-left: 2.2%;
+}
