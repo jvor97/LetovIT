@@ -27,6 +27,10 @@ footer {
   width: 100%;
 }
 
+h2 {
+  width: 100%;
+}
+
 .section {
   margin-top: 20px;
 }
@@ -35,6 +39,10 @@ footer {
   width: 10%;
   border-radius: 3px;
   padding: 2px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .postme {
@@ -62,4 +70,19 @@ input[type="text"] {
 }
 .postme input[type="file"] {
   margin-left: 2.2%;
+}
+
+.timeline {
+  height: 100rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-content: stretch;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.post {
+  width: 33.3%;
 }
