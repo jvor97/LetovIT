@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="textinput" />
+    </form>
+    <button onclick="inputLength();">Submit</button>
+  </body>
+
+  <script>
+    function inputLength() {
+      let getValue = document.getElementById("textinput").value;
+      let length = getValue.length;
+
+      if (length < 10) {
+        alert("Input je mensi ako 10");
+      } else {
+        alert("Input je vacsi ako 10");
+      }
+    }
+  </script>
+</html>
