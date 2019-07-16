@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Blank</title>
+    <script>
+      /*  function showMeValue() {
+        const myValue = document.getElementById("textinput").value;
+        alert(myValue);
+      }
+
+      function editMeValue() {
+        const myDate = new Date();
+        document.getElementById("textinput").value;
+        alert(myValue);
+      }  */
+
+      let myDate = new Date();
+
+      function editMeValue(change) {
+        if (change == "-1den") {
+          myDate.setDate(myDate.getDay() - 1);
+          document.getElementById("dateinput").value = myDate;
+        } else if (change == "+1den") {
+          myDate.setDate(myDate.getDay() + 1);
+          document.getElementById("dateinput").value = myDate;
+        } else if (change == "+1hour") {
+          myDate.setHours(myDate.getHours() + 1);
+          document.getElementById("dateinput").value = myDate;
+        } else {
+          myDate.setHours(myDate.getHours() - 1);
+          document.getElementById("dateinput").value = myDate;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- <form action="">
+      <input type="text" id="textinput" />
+    </form>
+    <button onclick="showMeValue();">Show me value</button>
+
+    <form action="">
+            <input type="text" id="textinput" />
+          </form>
+          <button onclick="editMeValue();">Edit me value</button>
+        -->
+    <form>
+      <input type="text" id="dateinput" />
+    </form>
+    <button onclick="editMeValue('-1den')">- 1 den</button>
+    <button onclick="editMeValue('-1hour');">- 1 hodina</button>
+    <button onclick="editMeValue('+1hour');">+ 1 hodina</button>
+    <button onclick="editMeValue('+1den');">+1 den</button>
+  </body>
+</html>
