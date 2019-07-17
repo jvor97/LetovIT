@@ -29,25 +29,40 @@
     </form>
 
     <script>
-      var singleBook = {},
-        books = [];
+      var singleBook = {};
+      var books = [];
       singleBook.title = title;
       singleBook.author = author;
       singleBook.stock = stock;
 
       // fn get value
       function getValue(id) {
-        document.getElementById(id).value;
+        return document.getElementById(id).value;
       }
 
       //fn push book to array
       function pushElement() {
-        title = getValue(title);
-        author = getValue(author);
-        stock = getValue(stock);
+        let title = getValue("title");
+        let author = getValue("author");
+        let stock = getValue("stock");
+
+        singleBook.title = title;
+        singleBook.author = author;
+        singleBook.stock = stock;
 
         books.push(singleBook);
         console.log(books);
+
+        DisplayBooks();
+      }
+
+      function DisplayBooks(){
+        for (i = 0; i < books.length; i++) {
+          var title = books[i].title;
+          var author = books[i].author;
+          var stock = books[i].stock;
+          // TODO: search for append on stackoverflow
+        }
       }
     </script>
   </body>
