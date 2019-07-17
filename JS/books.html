@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Books</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <table>
+          <tr>
+            <td>Nazov knihy</td>
+            <td><input type="text" id="title" /></td>
+          </tr>
+          <tr>
+            <td>Meno autora</td>
+            <td><input type="text" id="author" /></td>
+          </tr>
+          <tr>
+            <td>Kusov na sklade</td>
+            <td><input type="text" id="stock" /></td>
+          </tr>
+        </table>
+
+        <button onclick="pushElement();">Pridat knihu</button>
+      </div>
+    </form>
+
+    <script>
+      var singleBook = {},
+        books = [];
+      singleBook.title = title;
+      singleBook.author = author;
+      singleBook.stock = stock;
+
+      // fn get value
+      function getValue(id) {
+        document.getElementById(id).value;
+      }
+
+      //fn push book to array
+      function pushElement() {
+        title = getValue(title);
+        author = getValue(author);
+        stock = getValue(stock);
+
+        books.push(singleBook);
+        console.log(books);
+      }
+    </script>
+  </body>
+</html>
