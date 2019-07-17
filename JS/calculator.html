@@ -106,11 +106,9 @@
 
       <div class="round">
         <select id="round">
-          <option value="Zaokruhli nahor" id="up">Zaokruhli nahor</option>
-          <option value="Zaokruhli nadol" id="down">Zaokruhli nadol</option>
-          <option value="Zaokruhli matematicky" id="math"
-            >Zaokruhli matematicky</option
-          >
+          <option value="Zaokruhli_nahor">Zaokruhli nahor</option>
+          <option value="Zaokruhli_nadol">Zaokruhli nadol</option>
+          <option value="Zaokruhli_matematicky">Zaokruhli matematicky</option>
         </select>
       </div>
     </div>
@@ -165,6 +163,93 @@
       }
 
       document.querySelector(resultInput).value = result;
+    }
+    
+    // Another a bit cleaner solution
+    function Calculate(operator) {
+
+      // calculate result based on operations
+      let result = Operations(operator);
+
+      // attach result to correct input
+      let resultSelector = HandleResult(operator);
+
+      // round result based on selected rounding option
+      // TODO: in the Rounding method is bug.
+      let roundedResult = Rounding(result);
+
+      document.querySelector(resultSelector).value = roundedResult;
+    }
+
+    function Operations(operator) {
+      let result;
+      switch (operator) {
+        case "plus":
+          let num1 = document.querySelector(".n1").value;
+          let num2 = document.querySelector(".n2").value;
+
+          result = parseFloat(num1) + parseFloat(num2);
+          break;
+        case "minus":
+          let num3 = document.querySelector(".n3").value;
+          let num4 = document.querySelector(".n4").value;
+
+          result = parseFloat(num3) - parseFloat(num4);
+          break;
+        case "mult":
+          let num5 = document.querySelector(".n5").value;
+          let num6 = document.querySelector(".n6").value;
+
+          result = parseFloat(num5) * parseFloat(num6);
+          break;
+        case "devide":
+          let num7 = document.querySelector(".n7").value;
+          let num8 = document.querySelector(".n8").value;
+
+          result = parseFloat(num7) / parseFloat(num8);
+          break;
+        default:
+          break;
+      }
+
+      return result;
+    }
+
+    function HandleResult(operations) {
+      let resultInput;
+
+      switch (operator) {
+        case "plus":
+          resultInput = ".r1";
+          break;
+        case "minus":
+          resultInput = ".r2";
+          break;
+        case "mult":
+          resultInput = ".r3";
+          break;
+        case "devide":
+          resultInput = ".r4";
+          break;
+        default:
+          break;
+      }
+
+      return resultInput;
+    }
+
+    function Rounding(result) {
+      let roundedResult;
+
+      if (document.getElementById("up").checked) {
+        roundedResult = Math.ceil(result);
+      } else if (document.getElementById("down").checked) {
+        roundedResult = Math.floor(result);
+      } else if (document.getElementById("math").checked) {
+        roundedResult = Math.round(result);
+      }
+
+      return roundedResult;
     }
 
     /*
