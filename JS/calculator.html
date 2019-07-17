@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator</title>
+
+    <style>
+      .calculator {
+        display: flex;
+      }
+      .main-calc {
+        width: 30%;
+        height: 20rem;
+        display: grid;
+        grid-template-columns: 15% 15% 15% 15% 15%;
+        box-sizing: border-box;
+        grid-column-gap: 1rem;
+        grid-template-rows: 20% 20% 20% 20%;
+        grid-row-gap: 1rem;
+      }
+      .inp-number {
+        width: 100%;
+        height: 100%;
+      }
+      .inp-result {
+        width: 100%;
+        height: 100%;
+      }
+      .grid-item {
+        text-align: center;
+      }
+      .operator {
+        align-self: center;
+      }
+      .main-calc button {
+        height: 100%;
+        width: 100%;
+      }
+      .round {
+        display: inline-block;
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="main-calc">
+        <div class="grid-item">
+          <input type="number" class="inp-number n1" />
+        </div>
+        <div class="grid-item operator">+</div>
+        <div class="grid-item">
+          <input type="number" class="inp-number n2" />
+        </div>
+        <div class="grid-item">
+          <button onclick="calc('plus')">=</button>
+        </div>
+        <div class="grid-item">
+          <input type="text" class="inp-result r1" />
+        </div>
+
+        <div class="grid-item">
+          <input type="number" class="inp-number n3" />
+        </div>
+        <div class="grid-item operator">-</div>
+        <div class="grid-item">
+          <input type="number" class="inp-number n4" />
+        </div>
+        <div class="grid-item">
+          <button onclick="calc('minus')">=</button>
+        </div>
+        <div class="grid-item">
+          <input type="text" class="inp-result r2" />
+        </div>
+
+        <div class="grid-item">
+          <input type="number" class="inp-number n5" />
+        </div>
+        <div class="grid-item operator">*</div>
+        <div class="grid-item">
+          <input type="number" class="inp-number n6" />
+        </div>
+        <div class="grid-item">
+          <button onclick="calc('mult')">=</button>
+        </div>
+        <div class="grid-item">
+          <input type="number" class="inp-result r3" />
+        </div>
+
+        <div class="grid-item">
+          <input type="number" class="inp-number n7" />
+        </div>
+        <div class="grid-item operator">/</div>
+        <div class="grid-item">
+          <input type="number" class="inp-number n8" />
+        </div>
+        <div class="grid-item">
+          <button onclick="calc('devide')">=</button>
+        </div>
+        <div class="grid-item">
+          <input type="number" class="inp-result r4" />
+        </div>
+      </div>
+
+      <div class="round">
+        <select id="round">
+          <option value="Zaokruhli nahor" id="up">Zaokruhli nahor</option>
+          <option value="Zaokruhli nadol" id="down">Zaokruhli nadol</option>
+          <option value="Zaokruhli matematicky" id="math"
+            >Zaokruhli matematicky</option
+          >
+        </select>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function calc(operator) {
+      let result;
+      let resultInput = "";
+
+      switch (operator) {
+        case "plus":
+          let num1 = document.querySelector(".n1").value;
+          let num2 = document.querySelector(".n2").value;
+
+          result = parseFloat(num1) + parseFloat(num2);
+          resultInput = ".r1";
+          break;
+        case "minus":
+          let num3 = document.querySelector(".n3").value;
+          let num4 = document.querySelector(".n4").value;
+
+          result = parseFloat(num3) - parseFloat(num4);
+          resultInput = ".r2";
+          break;
+        case "mult":
+          let num5 = document.querySelector(".n5").value;
+          let num6 = document.querySelector(".n6").value;
+
+          result = parseFloat(num5) * parseFloat(num6);
+          resultInput = ".r3";
+          break;
+        case "devide":
+          let num7 = document.querySelector(".n7").value;
+          let num8 = document.querySelector(".n8").value;
+
+          result = parseFloat(num7) / parseFloat(num8);
+          resultInput = ".r4";
+          break;
+        default:
+          break;
+      }
+
+      // check round
+      if (document.getElementById("up").checked) {
+        result = Math.ceil(result);
+      } else if (document.getElementById("down").checked) {
+        result = Math.floor(result);
+      } else if (document.getElementById("math").checked) {
+        result = Math.round(result);
+      }
+
+      document.querySelector(resultInput).value = result;
+    }
+
+    /*
+    function roundChoose(roundType) {
+      switch (roundType) {
+        case "up":
+          Math.ceil(calc());
+          break;
+        case "down":
+          Math.floor(calc());
+          break;
+
+        case "math":
+          Math.round(calc());
+          break;
+        default:
+          calc();
+          break;
+      }
+    } */
+  </script>
+</html>
