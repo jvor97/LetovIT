@@ -7,26 +7,25 @@
     <title>Books</title>
   </head>
   <body>
-    <form>
-      <div>
-        <table>
-          <tr>
-            <td>Nazov knihy</td>
-            <td><input type="text" id="title" /></td>
-          </tr>
-          <tr>
-            <td>Meno autora</td>
-            <td><input type="text" id="author" /></td>
-          </tr>
-          <tr>
-            <td>Kusov na sklade</td>
-            <td><input type="text" id="stock" /></td>
-          </tr>
-        </table>
+    <div>
+      <table>
+        <tr>
+          <td>Nazov knihy</td>
+          <td><input type="text" id="title" /></td>
+        </tr>
+        <tr>
+          <td>Meno autora</td>
+          <td><input type="text" id="author" /></td>
+        </tr>
+        <tr>
+          <td>Kusov na sklade</td>
+          <td><input type="text" id="stock" /></td>
+        </tr>
+      </table>
 
-        <button onclick="pushElement();">Pridat knihu</button>
-      </div>
-    </form>
+      <button onclick="pushElement();">Pridat knihu</button>
+    </div>
+    <div class="book-list"></div>
 
     <script>
       var singleBook = {};
@@ -42,11 +41,6 @@
 
       //fn push book to array
       function pushElement() {
-<<<<<<< HEAD
-        title = getValue("title");
-        author = getValue("author");
-        stock = getValue("stock");
-=======
         let title = getValue("title");
         let author = getValue("author");
         let stock = getValue("stock");
@@ -54,7 +48,6 @@
         singleBook.title = title;
         singleBook.author = author;
         singleBook.stock = stock;
->>>>>>> 56f1999f27b44ecad536f8697b23488c9e2216c5
 
         books.push(singleBook);
         console.log(books);
@@ -62,12 +55,25 @@
         DisplayBooks();
       }
 
-      function DisplayBooks(){
+      function DisplayBooks() {
+        let list = "";
         for (i = 0; i < books.length; i++) {
           var title = books[i].title;
           var author = books[i].author;
           var stock = books[i].stock;
-          // TODO: search for append on stackoverflow
+
+          list +=
+            i +
+            1 +
+            ". Nazov: " +
+            title +
+            ", autor: " +
+            author +
+            ", ks: " +
+            stock +
+            "<br />";
+
+          document.querySelector(".book-list").innerHTML = list;
         }
       }
     </script>
