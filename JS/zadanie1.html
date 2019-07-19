@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*   const zvierata = ["slon", "macka", "pes", "zirafa"];
+
+      const word = zvierata.find(zviera => {
+        if (zviera.length > 5) {
+          return true;
+        }
+      });
+
+      
+      function findi(zvierata) {
+          
+      }
+
+      console.log(word);
+
+      */
+
+      const users = [
+        {
+          name: "John",
+          email: "john@example.com"
+        },
+        {
+          name: "Maria",
+          email: "maria@example.com"
+        },
+        {
+          name: "Paul",
+          email: "paul@example.com"
+        }
+      ];
+
+      const Pemail = users.find(user => {
+        if (user.name == "Paul") {
+          return true;
+        }
+      });
+
+      function PaulEmail() {
+        for (let i = 0; i < users.length; i++) {
+          const user = users[i];
+          if (user.name == "Paul") {
+            let PaulEmail = user.email;
+            return PaulEmail;
+          } else {
+          }
+        }
+      }
+      var Paemail = PaulEmail(users);
+      console.log(Paemail);
+      console.log(Pemail.email);
+
+      //array kt, vykrati cisla z 1 array
+
+      const numbers = [1, 2, 3, 4, 5];
+      const multNumbers = numbers.map(number => {
+        return number * 2;
+      });
+
+      console.log(multNumbers);
+    </script>
+  </body>
+</html>
