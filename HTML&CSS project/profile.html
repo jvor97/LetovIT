@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Profile</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html"
+          ><div class="logo">
+            <img src="images/logo.png" alt="profile-photo" /></div
+        ></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="profile.html">
+                <span class="nav-photo-span"
+                  ><img
+                    src="http://lorempixel.com/60/50/people/2/"
+                    alt="profile-photo"
+                    id="nav-photo"/></span
+                >User Name</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services"
+                >Settings</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Other</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="prof-head">
+      <div class="aside-prof-pic header-prof-pic">
+        <img src="http://lorempixel.com/400/400/people/2/" alt="profile-pic" />
+      </div>
+      <h2 id="user-name">Your Name</h2>
+    </header>
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Timeline</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Profile</li>
+      </ol>
+    </nav>
+
+    <section>
+      <form class="form">
+        <h4>Update your info:</h4>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail4"
+              placeholder="Email"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Date of birth</label>
+            <input
+              type="date"
+              class="form-control"
+              id="inputPassword4"
+              placeholder="Password"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Old password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputAddress"
+            placeholder="Your old password"
+          />
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">New password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="inputEmail4"
+              placeholder="New password"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Reenter new password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="inputPassword4"
+              placeholder="New password"
+            />
+          </div>
+        </div>
+        <label class="my-1 mr-2" for="inlineFormCustomSelectPref"
+          >Color theme</label
+        >
+        <select
+          class="custom-select my-1 mr-sm-2"
+          id="inlineFormCustomSelectPref"
+        >
+          <option selected>Choose...</option>
+          <option value="1">Black</option>
+          <option value="2">Brown</option>
+          <option value="3">Blue</option>
+          <option value="4">Gray</option>
+        </select>
+        <div class="form-group row">
+          <div class="col-sm-2">Receive notification ?</div>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck1" />
+              <label class="form-check-label" for="gridCheck1">
+                Yes please !
+              </label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+    </section>
+
+    <section>
+      <div class="card-deck">
+        <a href="#" class="card">
+          <img
+            class="card-img-top"
+            src="http://lorempixel.com/400/200/people/1/"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">My friends</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </a>
+        <a href="#" class="card">
+          <img
+            class="card-img-top"
+            src="http://lorempixel.com/400/200/sports/1/"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">My travels</h5>
+            <p class="card-text">
+              This card has supporting text below as a natural lead-in to
+              additional content.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </a>
+        <a href="#" class="card">
+          <img
+            class="card-img-top"
+            src="http://lorempixel.com/400/200/city/1/"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">My travel wishlist</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This card has even longer content
+              than the first to show that equal height action.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div>This page was created during Leto v IT course.</div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/663d8c7632.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
