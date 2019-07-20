@@ -14,10 +14,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
   </head>
 
   <body>
     <!-------NAVIGATION --------->
+    <!------------NAVIGATION ---------->
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
       id="mainNav"
@@ -59,6 +61,56 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Other</a>
             </li>
+            <li class="nav-item nav-hidden-aside">
+              <a
+                class="nav-link js-scroll-trigger dropdown-toggle"
+                href="#contact"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Aside</a
+              >
+              <ul class="dropdown-menu">
+                <li class="dropdown-item">
+                  <a href="profile.html"
+                    ><i class="far fa-user fa-fw"></i>
+                    Profile
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#"
+                    ><i class="fas fa-users fa-fw"></i>
+                    Groups
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#"
+                    ><i class="fas fa-globe-africa fa-fw"></i>
+                    Best travels
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#"
+                    ><i class="fas fa-crown fa-fw"></i>
+                    Favorites accounts
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#"
+                    ><li class="dropdown-item">
+                      <i class="far fa-calendar-alt fa-fw"></i>
+                      Calendar
+                    </li></a
+                  >
+                </li>
+                <li class="dropdown-item">
+                  <a href="#"
+                    ><i class="fas fa-map-marked-alt fa-fw"></i>
+                    Map
+                  </a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -81,7 +133,7 @@
     </nav>
 
     <!----------- FORM ------------->
-    <section>
+    <section class="prof-section">
       <form class="form">
         <h4>Update your info:</h4>
         <div class="form-row">
@@ -162,7 +214,7 @@
     </section>
 
     <!----------- CARD DECK------------->
-    <section>
+    <section class="prof-section">
       <div class="card-deck">
         <a href="#" class="card">
           <img

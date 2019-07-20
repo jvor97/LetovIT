@@ -26,6 +26,9 @@
   .btn {
     width: 30%;
   }
+  .card:hover {
+    transform: none;
+  }
 }
 
 /* Small devices (landscape phones, 425px and up)  */
@@ -43,6 +46,13 @@
   .post {
     width: 49.5%;
   }
+  section {
+    margin: 0.5rem !important;
+    margin-top: 0 !important;
+  }
+  .card:hover {
+    transform: scale(1.1);
+  }
 }
 
 /* Medium devices (tablets, 865px and up)  */
@@ -50,12 +60,16 @@
   .timeline {
     height: 170rem;
   }
+  .prof-section {
+    margin: 1.5rem !important;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   section {
     margin: 1.5rem !important;
+    margin-top: 0 !important;
   }
 
   aside {
@@ -89,6 +103,9 @@
   .post {
     width: 49.5%;
   }
+  .prof-section {
+    margin: 3rem !important;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -98,8 +115,5 @@
   }
   .post {
     width: 32.9%;
-  }
-  section {
-    margin: 3rem !important;
   }
 }
