@@ -5,474 +5,576 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/style.css" />
-   <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> --> 
-
-    <script src="https://kit.fontawesome.com/663d8c7632.js"></script>
-    
     <title>Travelvio</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
   </head>
 
   <body>
+    <!------------NAVIGATION ---------->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html"
+          ><div class="logo">
+            <img src="images/logo.png" alt="profile-photo" /></div
+        ></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="profile.html">
+                <span class="nav-photo-span"
+                  ><img
+                    src="http://lorempixel.com/60/50/people/2/"
+                    alt="profile-photo"
+                    id="nav-photo"/></span
+                >User Name</a
+              >
+            </li>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-            <div class="container">
-              <a class="navbar-brand js-scroll-trigger" href="index.html"><div class="logo"><img
-                src="images/logo.png"
-                alt="profile-photo" 
-            /></div></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="profile.html">
-                        <span class="nav-photo-span"><img
-                            src="http://lorempixel.com/60/50/people/2/"
-                            alt="profile-photo" id="nav-photo"
-                        /></span>User Name</a>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#services">Settings</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Other</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services"
+                >Settings</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Other</a>
+            </li>
+            <li class="nav-item nav-hidden-aside">
+              <a
+                class="nav-link js-scroll-trigger dropdown-toggle"
+                href="#contact"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Aside</a
+              >
+              <ul class="dropdown-menu">
+                <li class="dropdown-item">
+                  <a href="profile.html"
+                    ><i class="far fa-user"></i>
+                    Profile
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#"
+                    ><i class="fas fa-users"></i>
+                    Groups
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#"
+                    ><i class="fas fa-globe-africa"></i>
+                    Best travels
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#"
+                    ><i class="fas fa-crown"></i>
+                    Favorites accounts
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#"
+                    ><li class="dropdown-item">
+                      <i class="far fa-calendar-alt"></i>
+                      Calendar
+                    </li></a
+                  >
+                </li>
+                <li class="dropdown-item">
+                  <a href="#"
+                    ><i class="fas fa-map-marked-alt"></i>
+                    Map
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <!----------- ASIDE --------->
     <div class="page">
-    <aside>
-      <div class="aside-prof-pic">
-        <img src="http://lorempixel.com/400/400/people/2/" alt="profile-pic" />
-      </div>
-      <h2>Your Name</h2>
-      <ul id="ul-aside">
-            <li><a href="profile.html"><i class="far fa-user"></i>
-          Profile
-        </a></li>
-        <li><a href="#"><i class="fas fa-users"></i>
-          Groups
-        </a></li>
-        <li><a href="#"><i class="fas fa-globe-africa"></i>
-          Best travels
-        </a></li>
-        <li><a href="#"><i class="fas fa-crown"></i>
-          Favorites accounts
-        </a></li>
-        <li><a href="#"><li><i class="far fa-calendar-alt"></i>
-          Calendar
-        </a></li>
-        <li><a href="#"><i class="fas fa-map-marked-alt"></i>
-          Map
-        </a></li>
-      </ul>
-    </aside>
+      <aside>
+        <div class="aside-prof-pic">
+          <img
+            src="http://lorempixel.com/400/400/people/2/"
+            alt="profile-pic"
+          />
+        </div>
+        <h2>Your Name</h2>
+        <ul id="ul-aside">
+          <li>
+            <a href="profile.html"
+              ><i class="far fa-user"></i>
+              Profile
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-users"></i>
+              Groups
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-globe-africa"></i>
+              Best travels
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-crown"></i>
+              Favorites accounts
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><li>
+                <i class="far fa-calendar-alt"></i>
+                Calendar
+              </li></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-map-marked-alt"></i>
+              Map
+            </a>
+          </li>
+        </ul>
+      </aside>
 
-    <!----------- MAIN SITE --------->
-
-  <!----------- Form --------->
-    <main>
-      <section>
-        <form action="post" class="form postme-form">
-          <h4>Post me !</h4>
-          <div class="form-el">
-            <input type="text" name="title" placeholder="Title" /> <br />
-          </div>
-          <div class="form-el">
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="2"
-              placeholder="What is in your mind ?"
-            ></textarea>
-          </div>
-          <div class="form-el">
-            <label for="category">Category</label>
-            <select name="category" id="category">
-              <option value="Eu" label="Europe"></option>
-              <option value="Asia" label="Asia"></option>
-              <option value="US" label="America"></option>
-              <option value="Aus" label="Australia"></option>
-              <option value="Afr" label="Africa"></option>
-            </select>
-          </div>
-          <div class="form-el">
-            <span class="file-upload">
+      <!----------- MAIN --------->
+      <!----------- Form --------->
+      <main>
+        <section>
+          <form action="post" class="form postme-form">
+            <h4>Post me !</h4>
+            <div class="form-el">
+              <input type="text" name="title" placeholder="Title" /> <br />
+            </div>
+            <div class="form-el">
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="2"
+                placeholder="What is in your mind ?"
+              ></textarea>
+            </div>
+            <div class="form-el">
+              <label for="category">Category</label>
+              <select name="category" id="category" class="custom-select">
+                <option value="Eu" label="Europe"></option>
+                <option value="Asia" label="Asia"></option>
+                <option value="US" label="America"></option>
+                <option value="Aus" label="Australia"></option>
+                <option value="Afr" label="Africa"></option>
+              </select>
+            </div>
+            <div class="form-el">
+              <span class="file-upload">
                 <label for="file-input">
-                    <i class="far fa-images"></i>
+                  <i class="far fa-images"></i>
                 </label>
-                <input id="file-input" type="image"/>
-            </span>
-            <span class="file-upload">
+                <input id="file-input" type="image" />
+              </span>
+              <span class="file-upload">
                 <label for="file-input">
-                    <i class="far fa-file"></i>
+                  <i class="far fa-file"></i>
                 </label>
-                <input id="file-input" type="file"/>
-            </span>
-            <input type="submit" name="submit" value="Submit" class="btn" />
-          </div>
-          
-        </form>
-      </section>
-
-      <!----------- TIMELINE --------->
-      <section class="timeline">
-        <article class="post">
-          <div class="main-post">
-            <div class="main-content">
-              <h2>Lorem ipsum</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                ipsam cumque mollitia facilis. Odio a debitis eligendi molestias
-                id vero ipsa iusto veniam dicta, obcaecati, iste vel esse
-                officia ad!
-              </p>
+                <input id="file-input" type="file" />
+              </span>
+              <input type="submit" name="submit" value="Submit" class="btn" />
             </div>
-            <div class="user">
-              <div class="user-photo">
-                <a href="#" class="user-name"
-                  ><img
-                    src="http://lorempixel.com/60/50/people/6/"
-                    alt="profile-photo"
-                /></<ul>
+          </form>
+        </section>
+
+        <!----------- TIMELINE --------->
+        <section class="timeline">
+          <article class="post">
+            <div class="main-post">
+              <div class="main-content">
+                <h2>Lorem ipsum</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  ipsam cumque mollitia facilis. Odio a debitis eligendi
+                  molestias id vero ipsa iusto veniam dicta, obcaecati, iste vel
+                  esse officia ad!
+                </p>
               </div>
-              <a href="#" class="user-name"><strong>User name</strong></a>
-            </div>
-            <div class="category">Europe</div>
-          </div>
-          <div class="action-div">
-            <span class="btn-action">Love it!</span>
-            <span class="btn-action">Comment</span>
-          </div>
-        </article>
-
-        <article class="post">
-          <div class="main-post">
-            <div class="post-photo">
-              <img
-                src="http://lorempixel.com/400/200/city/5/"
-                alt="travel-photo"
-              />
-            </div>
-            <div class="main-content">
-              <h2>Lorem ipsum</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                ipsam cumque mollitia facilis. Odio a debitis eligendi molestias
-                id vero ipsa iusto veniam dicta, obcaecati, iste vel esse
-                officia ad!
-              </p>
-            </div>
-            <div class="user">
-              <div class="user-photo">
-                <a href="#" class="user-name"
-                  ><img
-                    src="http://lorempixel.com/60/50/people/5/"
-                    alt="profile-photo"
-                /></a>
+              <div class="user">
+                <div class="user-photo">
+                  <a href="#" class="user-name"
+                    ><img
+                      src="http://lorempixel.com/60/50/people/6/"
+                      alt="profile-photo"
+                  /></a>
+                </div>
+                <a href="#" class="user-name"><strong>User name</strong></a>
               </div>
-              <a href="#" class="user-name"><strong>User name</strong></a>
+              <div class="category">Europe</div>
             </div>
-            <div class="category">Europe</div>
-          </div>
-          <div class="action-div">
-            <span class="btn-action btn-love">Love it!</span>
-            <span class="btn-action btn-comment">Comment</span>
-          </div>
-        </article>
+            <div class="action-div">
+              <span class="btn-action">Love it!</span>
+              <span class="btn-action">Comment</span>
+            </div>
+          </article>
 
-        <article class="post">
-          <div class="main-post">
-            <div class="post-photo">
-              <img
-                src="http://lorempixel.com/400/200/city/4/"
-                alt="travel-photo"
-              />
-            </div>
-            <div class="main-content"></div>
-            <div class="user">
-              <div class="user-photo">
-                <a href="#" class="user-name"
-                  ><img
-                    src="http://lorempixel.com/60/50/people/4/"
-                    alt="profile-photo"
-                /></a>
+          <article class="post">
+            <div class="main-post">
+              <div class="post-photo">
+                <img
+                  src="http://lorempixel.com/600/300/city/5/"
+                  alt="travel-photo"
+                />
               </div>
-              <a href="#" class="user-name"><strong>User name</strong></a>
-            </div>
-            <div class="category">Asia</div>
-          </div>
-          <div class="action-div">
-            <span class="btn-action btn-love">Love it!</span>
-            <span class="btn-action btn-comment">Comment</span>
-          </div>
-        </article>
-
-        <article class="post">
-          <div class="main-post">
-            <div class="post-photo">
-              <img
-                src="http://lorempixel.com/400/200/city/3/"
-                alt="travel-photo"
-              />
-            </div>
-            <div class="main-content"></div>
-            <div class="user">
-              <div class="user-photo">
-                <a href="#" class="user-name"
-                  ><img
-                    src="http://lorempixel.com/60/50/people/3/"
-                    alt="profile-photo"
-                /></a>
+              <div class="main-content">
+                <h2>Lorem ipsum</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  ipsam cumque mollitia facilis. Odio a debitis eligendi
+                  molestias id vero ipsa iusto veniam dicta, obcaecati, iste vel
+                  esse officia ad!
+                </p>
               </div>
-              <a href="#" class="user-name"><strong>User name</strong></a>
-            </div>
-            <div class="category">Asia</div>
-          </div>
-          <div class="action-div">
-            <span class="btn-action btn-love">Love it!</span>
-            <span class="btn-action btn-comment">Comment</span>
-          </div>
-        </article>
-
-        <article class="post">
-          <div class="main-post">
-            <div class="main-content">
-              <h2>Lorem ipsum</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                ipsam cumque mollitia facilis. Odio a debitis eligendi molestias
-                id vero ipsa iusto veniam dicta, obcaecati, iste vel esse
-                officia ad!
-              </p>
-            </div>
-            <div class="user">
-              <div class="user-photo">
-                <a href="#" class="user-name"
-                  ><img
-                    src="http://lorempixel.com/60/50/people/1/"
-                    alt="profile-photo"
-                /></a>
+              <div class="user">
+                <div class="user-photo">
+                  <a href="#" class="user-name"
+                    ><img
+                      src="http://lorempixel.com/60/50/people/5/"
+                      alt="profile-photo"
+                  /></a>
+                </div>
+                <a href="#" class="user-name"><strong>User name</strong></a>
               </div>
-              <a href="#" class="user-name"><strong>User name</strong></a>
+              <div class="category">Europe</div>
             </div>
-            <div class="category">Europe</div>
-          </div>
-          <div class="action-div">
-            <span class="btn-action btn-love">Love it!</span>
-            <span class="btn-action btn-comment">Comment</span>
-          </div>
-        </article>
+            <div class="action-div">
+              <span class="btn-action">Love it!</span>
+              <span class="btn-action">Comment</span>
+            </div>
+          </article>
 
-        <article class="post">
-          <div class="main-post">
-            <div class="post-photo">
-              <img
-                src="http://lorempixel.com/400/200/city/2/"
-                alt="travel-photo"
-              />
-            </div>
-            <div class="main-content">
-              <h2>Lorem ipsum</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                ipsam cumque mollitia facilis. Odio a debitis eligendi molestias
-                id vero ipsa iusto veniam dicta, obcaecati, iste vel esse
-                officia ad!
-              </p>
-            </div>
-            <div class="user">
-              <div class="user-photo">
-                <a href="#" class="user-name"
-                  ><img
-                    src="http://lorempixel.com/60/50/people/2/"
-                    alt="profile-photo"
-                /></a>
+          <article class="post">
+            <div class="main-post">
+              <div class="post-photo">
+                <img
+                  src="http://lorempixel.com/600/300/city/4/"
+                  alt="travel-photo"
+                />
               </div>
-              <a href="#" class="user-name"><strong>User name</strong></a>
-            </div>
-            <div class="category">Europe</div>
-          </div>
-          <div class="action-div">
-            <span class="btn-action btn-love">Love it!</span>
-            <span class="btn-action btn-comment">Comment</span>
-          </div>
-        </article>
-
-        <article class="post">
-          <div class="main-post">
-            <div class="post-photo">
-              <img
-                src="http://lorempixel.com/400/200/city/1/"
-                alt="travel-photo"
-              />
-            </div>
-            <div class="main-content">
-              <h2>Lorem ipsum</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                ipsam cumque mollitia facilis. Odio a debitis eligendi molestias
-                id vero ipsa iusto veniam dicta, obcaecati, iste vel esse
-                officia ad!
-              </p>
-            </div>
-            <div class="user">
-              <div class="user-photo">
-                <a href="#" class="user-name"
-                  ><img
-                    src="http://lorempixel.com/60/50/people/"
-                    alt="profile-photo"
-                /></a>
+              <div class="main-content"></div>
+              <div class="user">
+                <div class="user-photo">
+                  <a href="#" class="user-name"
+                    ><img
+                      src="http://lorempixel.com/60/50/people/4/"
+                      alt="profile-photo"
+                  /></a>
+                </div>
+                <a href="#" class="user-name"><strong>User name</strong></a>
               </div>
-              <a href="#" class="user-name"><strong>User name</strong></a>
+              <div class="category">Asia</div>
             </div>
-            <div class="category">Europe</div>
-          </div>
-          <div class="action-div">
-            <span class="btn-action btn-love">Love it!</span>
-            <span class="btn-action btn-comment">Comment</span>
-          </div>
-        </article>
+            <div class="action-div">
+              <span class="btn-action">Love it!</span>
+              <span class="btn-action">Comment</span>
+            </div>
+          </article>
 
-        <article class="post">
-          <div class="main-post">
-            <div class="main-content">
-              <h2>Lorem ipsum</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                ipsam cumque mollitia facilis. Odio a debitis eligendi molestias
-                id vero ipsa iusto veniam dicta, obcaecati, iste vel esse
-                officia ad!
-              </p>
-            </div>
-            <div class="user">
-              <div class="user-photo">
-                <a href="#" class="user-name"
-                  ><img
-                    src="http://lorempixel.com/60/50/people/6/"
-                    alt="profile-photo"
-                /></a>
+          <article class="post">
+            <div class="main-post">
+              <div class="post-photo">
+                <img
+                  src="http://lorempixel.com/600/300/city/3/"
+                  alt="travel-photo"
+                />
               </div>
-              <a href="#" class="user-name"><strong>User name</strong></a>
-            </div>
-            <div class="category">Europe</div>
-          </div>
-          <div class="action-div">
-            <span class="btn-action btn-love">Love it!</span>
-            <span class="btn-action btn-comment">Comment</span>
-          </div>
-        </article>
-
-        <article class="post">
-          <div class="main-post">
-            <div class="main-content">
-              <h2>Lorem ipsum</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                ipsam cumque mollitia facilis. Odio a debitis eligendi molestias
-                id vero ipsa iusto veniam dicta, obcaecati, iste vel esse
-                officia ad!
-              </p>
-            </div>
-            <div class="user">
-              <div class="user-photo">
-                <a href="#" class="user-name"
-                  ><img
-                    src="http://lorempixel.com/60/50/people/6/"
-                    alt="profile-photo"
-                /></a>
+              <div class="main-content"></div>
+              <div class="user">
+                <div class="user-photo">
+                  <a href="#" class="user-name"
+                    ><img
+                      src="http://lorempixel.com/60/50/people/3/"
+                      alt="profile-photo"
+                  /></a>
+                </div>
+                <a href="#" class="user-name"><strong>User name</strong></a>
               </div>
-              <a href="#" class="user-name"><strong>User name</strong></a>
+              <div class="category">Asia</div>
             </div>
-            <div class="category">Europe</div>
-          </div>
-          <div class="action-div">
-            <span class="btn-action btn-love">Love it!</span>
-            <span class="btn-action btn-comment">Comment</span>
-          </div>
-        </article>
+            <div class="action-div">
+              <span class="btn-action">Love it!</span>
+              <span class="btn-action">Comment</span>
+            </div>
+          </article>
 
-        <article class="post">
-          <div class="main-post">
-            <div class="post-photo">
-              <img
-                src="http://lorempixel.com/400/200/city/4/"
-                alt="travel-photo"
-              />
-            </div>
-            <div class="main-content"></div>
-            <div class="user">
-              <div class="user-photo">
-                <a href="#" class="user-name"
-                  ><img
-                    src="http://lorempixel.com/60/50/people/4/"
-                    alt="profile-photo"
-                /></a>
+          <article class="post">
+            <div class="main-post">
+              <div class="main-content">
+                <h2>Lorem ipsum</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  ipsam cumque mollitia facilis. Odio a debitis eligendi
+                  molestias id vero ipsa iusto veniam dicta, obcaecati, iste vel
+                  esse officia ad!
+                </p>
               </div>
-              <a href="#" class="user-name"><strong>User name</strong></a>
-            </div>
-            <div class="category">Asia</div>
-          </div>
-          <div class="action-div">
-            <span class="btn-action btn-love">Love it!</span>
-            <span class="btn-action btn-comment">Comment</span>
-          </div>
-        </article>
-
-        <article class="post">
-          <div class="main-post">
-            <div class="post-photo">
-              <img
-                src="http://lorempixel.com/400/200/city/2/"
-                alt="travel-photo"
-              />
-            </div>
-            <div class="main-content">
-              <h2>Lorem ipsum</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                ipsam cumque mollitia facilis. Odio a debitis eligendi molestias
-                id vero ipsa iusto veniam dicta, obcaecati, iste vel esse
-                officia ad!
-              </p>
-            </div>
-            <div class="user">
-              <div class="user-photo">
-                <a href="#" class="user-name"
-                  ><img
-                    src="http://lorempixel.com/60/50/people/2/"
-                    alt="profile-photo"
-                /></a>
+              <div class="user">
+                <div class="user-photo">
+                  <a href="#" class="user-name"
+                    ><img
+                      src="http://lorempixel.com/60/50/people/1/"
+                      alt="profile-photo"
+                  /></a>
+                </div>
+                <a href="#" class="user-name"><strong>User name</strong></a>
               </div>
-              <a href="#" class="user-name"><strong>User name</strong></a>
+              <div class="category">Europe</div>
             </div>
-            <div class="category">Europe</div>
-          </div>
-          <div class="action-div">
-            <span class="btn-action btn-love">Love it!</span>
-            <span class="btn-action btn-comment">Comment</span>
-          </div>
-        </article>
+            <div class="action-div">
+              <span class="btn-action">Love it!</span>
+              <span class="btn-action">Comment</span>
+            </div>
+          </article>
 
+          <article class="post">
+            <div class="main-post">
+              <div class="post-photo">
+                <img
+                  src="http://lorempixel.com/600/300/city/2/"
+                  alt="travel-photo"
+                />
+              </div>
+              <div class="main-content">
+                <h2>Lorem ipsum</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  ipsam cumque mollitia facilis. Odio a debitis eligendi
+                  molestias id vero ipsa iusto veniam dicta, obcaecati, iste vel
+                  esse officia ad!
+                </p>
+              </div>
+              <div class="user">
+                <div class="user-photo">
+                  <a href="#" class="user-name"
+                    ><img
+                      src="http://lorempixel.com/60/50/people/2/"
+                      alt="profile-photo"
+                  /></a>
+                </div>
+                <a href="#" class="user-name"><strong>User name</strong></a>
+              </div>
+              <div class="category">Europe</div>
+            </div>
+            <div class="action-div">
+              <span class="btn-action">Love it!</span>
+              <span class="btn-action">Comment</span>
+            </div>
+          </article>
 
-      </section>
-    </main>
-</div>
+          <article class="post">
+            <div class="main-post">
+              <div class="post-photo">
+                <img
+                  src="http://lorempixel.com/600/300/city/1/"
+                  alt="travel-photo"
+                />
+              </div>
+              <div class="main-content">
+                <h2>Lorem ipsum</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  ipsam cumque mollitia facilis. Odio a debitis eligendi
+                  molestias id vero ipsa iusto veniam dicta, obcaecati, iste vel
+                  esse officia ad!
+                </p>
+              </div>
+              <div class="user">
+                <div class="user-photo">
+                  <a href="#" class="user-name"
+                    ><img
+                      src="http://lorempixel.com/60/50/people/"
+                      alt="profile-photo"
+                  /></a>
+                </div>
+                <a href="#" class="user-name"><strong>User name</strong></a>
+              </div>
+              <div class="category">Europe</div>
+            </div>
+            <div class="action-div">
+              <span class="btn-action">Love it!</span>
+              <span class="btn-action">Comment</span>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="main-post">
+              <div class="main-content">
+                <h2>Lorem ipsum</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  ipsam cumque mollitia facilis. Odio a debitis eligendi
+                  molestias id vero ipsa iusto veniam dicta, obcaecati, iste vel
+                  esse officia ad!
+                </p>
+              </div>
+              <div class="user">
+                <div class="user-photo">
+                  <a href="#" class="user-name"
+                    ><img
+                      src="http://lorempixel.com/60/50/people/6/"
+                      alt="profile-photo"
+                  /></a>
+                </div>
+                <a href="#" class="user-name"><strong>User name</strong></a>
+              </div>
+              <div class="category">Europe</div>
+            </div>
+            <div class="action-div">
+              <span class="btn-action">Love it!</span>
+              <span class="btn-action">Comment</span>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="main-post">
+              <div class="main-content">
+                <h2>Lorem ipsum</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  ipsam cumque mollitia facilis. Odio a debitis eligendi
+                  molestias id vero ipsa iusto veniam dicta, obcaecati, iste vel
+                  esse officia ad!
+                </p>
+              </div>
+              <div class="user">
+                <div class="user-photo">
+                  <a href="#" class="user-name"
+                    ><img
+                      src="http://lorempixel.com/60/50/people/6/"
+                      alt="profile-photo"
+                  /></a>
+                </div>
+                <a href="#" class="user-name"><strong>User name</strong></a>
+              </div>
+              <div class="category">Europe</div>
+            </div>
+            <div class="action-div">
+              <span class="btn-action">Love it!</span>
+              <span class="btn-action">Comment</span>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="main-post">
+              <div class="post-photo">
+                <img
+                  src="http://lorempixel.com/600/300/city/4/"
+                  alt="travel-photo"
+                />
+              </div>
+              <div class="main-content"></div>
+              <div class="user">
+                <div class="user-photo">
+                  <a href="#" class="user-name"
+                    ><img
+                      src="http://lorempixel.com/60/50/people/4/"
+                      alt="profile-photo"
+                  /></a>
+                </div>
+                <a href="#" class="user-name"><strong>User name</strong></a>
+              </div>
+              <div class="category">Asia</div>
+            </div>
+            <div class="action-div">
+              <span class="btn-action">Love it!</span>
+              <span class="btn-action">Comment</span>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="main-post">
+              <div class="post-photo">
+                <img
+                  src="http://lorempixel.com/600/300/city/2/"
+                  alt="travel-photo"
+                />
+              </div>
+              <div class="main-content">
+                <h2>Lorem ipsum</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  ipsam cumque mollitia facilis. Odio a debitis eligendi
+                  molestias id vero ipsa iusto veniam dicta, obcaecati, iste vel
+                  esse officia ad!
+                </p>
+              </div>
+              <div class="user">
+                <div class="user-photo">
+                  <a href="#" class="user-name"
+                    ><img
+                      src="http://lorempixel.com/60/50/people/2/"
+                      alt="profile-photo"
+                  /></a>
+                </div>
+                <a href="#" class="user-name"><strong>User name</strong></a>
+              </div>
+              <div class="category">Europe</div>
+            </div>
+            <div class="action-div">
+              <span class="btn-action">Love it!</span>
+              <span class="btn-action">Comment</span>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <!----------- FOOTER ------------->
     <footer>
       <div>This page was created during Leto v IT course.</div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/663d8c7632.js"></script>
   </body>
 </html>
