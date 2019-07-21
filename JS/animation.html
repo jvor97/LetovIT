@@ -32,18 +32,45 @@
     </div>
 
     <script>
-      function myMove(direction) {
-        //when click on up
-        switch (direction) {
-          case up:
-            document.getElementById("up").style.break;
+      let currentPositionLeft = 0;
+      let currentPositionTop = 0;
 
+      function myMove(direction) {
+        //get square style
+        let square = document.getElementById("animate");
+
+        // let leftPosition = (square.style.left = currentPositionLeft);
+        // let topPosition = (square.style.top = currentPositionTop);
+        // let startPosition = ((leftPosition = 0), (topPosition = 0));
+
+        // let currentPositionTotal = leftPosition + topPosition;
+
+        //move direction of square
+        switch (direction) {
+          case "up":
+            currentPositionTop += -50;
+            break;
+          case "left":
+            currentPositionLeft += -50;
+            break;
+          case "right":
+            currentPositionLeft += 50;
+            break;
+          case "down":
+            currentPositionTop += 50;
+            break;
           default:
             break;
         }
-        //when click on left
-        //when click on rigt
-        //when click on down
+
+        /* let leftPosition = (square.style.left = currentPositionLeft + "px");
+        let topPosition = (square.style.top = currentPositionTop + "px");
+*/
+
+        document.getElementById("animate").style.left =
+          currentPositionLeft + "px";
+        document.getElementById("animate").style.top =
+          currentPositionTop + "px";
       }
     </script>
   </body>
