@@ -22,10 +22,10 @@
     </style>
   </head>
   <body>
-    <p><button onclick="myMove('up')">Up</button></p>
-    <p><button onclick="myMove('left')">Left</button></p>
-    <p><button onclick="myMove('right')">Right</button></p>
-    <p><button onclick="myMove('down')">Down</button></p>
+    <p><button onclick="myMove('up')" id="up">Up</button></p>
+    <p><button onclick="myMove('left')" id="left">Left</button></p>
+    <p><button onclick="myMove('right')" id="right">Right</button></p>
+    <p><button onclick="myMove('down')" id="down">Down</button></p>
 
     <div id="container">
       <div id="animate"></div>
@@ -36,17 +36,10 @@
       let currentPositionTop = 0;
 
       function myMove(direction) {
-        //get square style
         let square = document.getElementById("animate");
 
-        // let leftPosition = (square.style.left = currentPositionLeft);
-        // let topPosition = (square.style.top = currentPositionTop);
-        // let startPosition = ((leftPosition = 0), (topPosition = 0));
-
-        // let currentPositionTotal = leftPosition + topPosition;
-
         //move direction of square
-        switch (direction) {
+        switch (button.id) {
           case "up":
             currentPositionTop += -50;
             break;
@@ -63,14 +56,21 @@
             break;
         }
 
-        /* let leftPosition = (square.style.left = currentPositionLeft + "px");
-        let topPosition = (square.style.top = currentPositionTop + "px");
-*/
-
         document.getElementById("animate").style.left =
           currentPositionLeft + "px";
         document.getElementById("animate").style.top =
           currentPositionTop + "px";
+      }
+
+      //validate allowed space
+      function AllowedSpace() {
+        let leftPosition = square.style.left;
+        let topPosition = square.style.top;
+
+        if (leftPosition < "400px" && topPosition < "400px") {
+          myMove();
+        } else {
+        }
       }
     </script>
   </body>
