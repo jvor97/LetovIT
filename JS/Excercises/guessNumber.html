@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="verifyGuess()">Start game</button>
+    <div id="message"></div>
+
+    <script>
+      function randomNumber() {
+        let random = Math.ceil(Math.random() * 10);
+        return random;
+      }
+
+      function readGuess(input) {
+        let inputedNumber = prompt("Please guess a number from 1-10", "");
+        return inputedNumber;
+      }
+
+      function verifyGuess(params) {
+        let random = randomNumber();
+        let inputedNumber = readGuess();
+
+        if (random == inputedNumber) {
+          document.getElementById("message").innerHTML = "Good job!";
+        } else {
+          document.getElementById("message").innerHTML = "Not matched";
+        }
+      }
+    </script>
+  </body>
+</html>
