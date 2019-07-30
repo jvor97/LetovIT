@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Excercise 6
+      var url = document.location.href;
+      console.log(url);
+
+      //Excercise 8
+      var n1 = 50;
+      var n2 = 50;
+
+      function checkNumber(num1, num2) {
+        let fifty;
+        if (num1 == 50 || num2 == 50) {
+          //ako zadefinujem, ze nie cas ked sa oba rovvanju 50, bez toho abz som to musela davat do dALSIEHO ELSE IF ???
+          fifty = true;
+        } else if (num1 + num2 == 50) {
+          fifty = true;
+        } else {
+          fifty = false;
+        }
+
+        return fifty;
+      }
+      let check = checkNumber(n1, n2);
+      console.log(check);
+    </script>
+  </body>
+</html>
