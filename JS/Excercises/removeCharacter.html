@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Excercise 10
+      // Write a JavaScript program to remove a character at the specified position of a given string and return the new string.
+
+      function removeCharacterOnPosition(word, position) {
+        //split string
+        let splitedString = word.split("");
+        let editedWord = "";
+
+        //remove
+        for (let i = 0; i < splitedString.length; i++) {
+          if (i == position) {
+            editedWord += "";
+          } else {
+            editedWord += splitedString[i];
+          }
+        }
+        return editedWord;
+      }
+
+      console.log(removeCharacterOnPosition("Janko", 3));
+      //ako ich mam rozdelit- aby som mohla zadat to slovo kazdy krat ked chcem- potrebujem zadat parameter do split funkcie, ale ako ked budem volat inu funkciu
+
+      function removeCharacter(word) {
+        let newWord = word.replace(/a/, ""); //--> remove first a
+        let newWord1 = word.replace(/a/g, ""); //-->remove all a from string
+
+        return newWord;
+      }
+
+      console.log(removeCharacter("Janko"));
+    </script>
+  </body>
+</html>

@@ -9,10 +9,12 @@
   <body>
     <script>
       //Excercise 6
+      //   Write a JavaScript program to get the website URL (loading page).
       var url = document.location.href;
       console.log(url);
 
       //Excercise 8
+      //   Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50.
       var n1 = 50;
       var n2 = 50;
 
@@ -31,6 +33,38 @@
       }
       let check = checkNumber(n1, n2);
       console.log(check);
+
+      //Excercise 9
+      // Write a JavaScript program to check from two given integers, if one is positive and one is negative.
+      let condition;
+
+      function checkPositive(number1, number2) {
+        if ((number1 > 0 && number2 < 0) || (number1 < 0 && number2 > 0)) {
+          condition = true;
+        } else {
+          condition = false;
+        }
+        return condition;
+      }
+      console.log(checkPositive(4, 5));
+
+      //Excercise 11
+      //Write a JavaScript program to create a new string from a given string with the first character of the given string added at the front and back.
+      let string = "blabla";
+      let newstring;
+
+      function addFirstCharacter(word) {
+        let splitedword = word.split("");
+        console.log(splitedword);
+        let splitedwordFirstChar = splitedword[0];
+
+        splitedword.push(splitedwordFirstChar);
+        splitedword.unshift(splitedwordFirstChar);
+
+        return splitedword;
+      }
+
+      console.log(addFirstCharacter("word"));
     </script>
   </body>
 </html>

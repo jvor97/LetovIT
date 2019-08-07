@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="string" />
+      <button onclick="printResult()">Edit word</button>
+      <div class="demo"></div>
+    </div>
+    <script>
+      //Excercise 11
+      //Write a JavaScript program to create a new string from a given string with the first character of the given string added at the front and back.
+      //get value
+      function getValue() {
+        return document.getElementById("string").value;
+      }
+
+      function addFirstCharacter(word) {
+        word = getValue();
+        let splitedword = word.split("");
+        let splitedwordFirstChar = splitedword[0];
+
+        splitedword.push(splitedwordFirstChar);
+        splitedword.unshift(splitedwordFirstChar);
+        //  splitedword.join("");
+
+        let editedWord;
+        for (let i = 0; i < splitedword.length; i++) {
+          editedWord += splitedword[i];
+        }
+        //  return splitedword.join("");
+        return editedWord;
+      }
+      console.log(addFirstCharacter());
+
+      function printResult() {
+        const getEditedWord = addFirstCharacter();
+        document.getElementById("demo").innerHTML = getEditedWord;
+      }
+
+      //   console.log(addFirstCharacter("word"));
+    </script>
+  </body>
+</html>
