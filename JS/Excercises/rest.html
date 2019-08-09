@@ -65,6 +65,59 @@
       }
 
       console.log(addFirstCharacter("word"));
+
+      //Excercise 12
+      //   12. Write a JavaScript program to check if a string starts with 'Java' and false otherwise.
+      function startWith(string) {
+        if (string.startsWith("Java")) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(startWith("Jaamethod"));
+
+      //Excercise 14
+      //14. Write a JavaScript program to count the number of vowels in a given string.
+
+      function splitString(string) {
+        return string.split("");
+      }
+
+      function getVowels() {
+        const vowels = ["a", "e", "i", "o", "u"];
+
+        for (let i = 0; i < vowels.length; i++) {
+          const vowel = vowels[i];
+          return vowel;
+        }
+      }
+
+      function countVowels(array) {
+        const vowels = ["a", "e", "i", "o", "u"];
+        let vowelsNumber = 0;
+        const vowel = getVowels();
+
+        if (array.includes("a")) {
+          vowelsNumber += 1;
+        }
+
+        return vowelsNumber;
+      }
+
+      console.log(countVowels("hello world"));
+
+      //prvocisla ak zvysok delenim neparnym je 0 cislo % 2 != 0
+      //ak je cislo delitelne 1 a cislom mensim ako ono same tak
+      function getPrime() {
+        for (let i = 0; i < 100; i++) {
+          const element = array[i];
+          if (element % 2 !== 0) {
+            if (element % element.slice(0, [i]) !== 0) {
+            }
+          }
+        }
+      }
     </script>
   </body>
 </html>

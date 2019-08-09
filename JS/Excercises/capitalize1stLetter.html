@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="text" />
+      <button onclick="printValue()">Capitalize first letter</button>
+      <div id="demo"></div>
+    </div>
+
+    <script>
+      //Excercise 13
+      //13. Write a JavaScript program to capitalize the first letter of each word of a given string
+      function getValue() {
+        return document.getElementById("text").value;
+      }
+
+      function capitalizeFirstLetter(string) {
+        string = getValue();
+
+        let splitedString = string.split(" ");
+        console.log(splitedString);
+
+        //rodelim si to na slova- potom preiterujem aray s rozdelenymi slovami a kazdej dame touppercase na charat(0)
+
+        // let capitalizedWord;
+        // for (let i = 0; i < splitedString.length; i++) {
+        //   let capitalizedLetter = splitedString[i].replaceAt(0, "c");
+
+        //   capitalizedWord += capitalizedLetter + "";
+        //   //   oneWord = splitedString[i];
+        //   //   const splitedWord = oneWord.split("");
+        //   //   if (splitedWord[0]) {
+        //   //     splitedWord[0].toUpperCase();
+        //   //   }
+        //   //   splitedWord.join("");
+        //   // }
+
+        //   // let joined = oneWord.join("");
+        //   // return joined;
+        // }
+        // return capitalizedWord;
+
+        // for (let i = 0; i < splitedString.length - 1; i++) {
+        //   if (splitedString[i] == " ") {
+        //     splitedString[i+1].toUpperCase();
+        //   } else {
+        //   }
+        // }
+        // return splitedString.join();
+        let editedString = "";
+        for (let i = 0; i < splitedString.length; i++) {
+          let word = splitedString[i];
+          capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
+
+          editedString += capitalizedWord + " ";
+        }
+        return editedString;
+      }
+
+      function printValue() {
+        let text = capitalizeFirstLetter();
+        return (document.getElementById("demo").innerHTML = text);
+      }
+    </script>
+  </body>
+</html>

@@ -10,7 +10,7 @@
     <div>
       <input type="text" id="string" />
       <button onclick="printResult()">Edit word</button>
-      <div class="demo"></div>
+      <div id="demo"></div>
     </div>
     <script>
       //Excercise 11
@@ -27,14 +27,9 @@
 
         splitedword.push(splitedwordFirstChar);
         splitedword.unshift(splitedwordFirstChar);
-        //  splitedword.join("");
+        //splitedword.join("");
 
-        let editedWord;
-        for (let i = 0; i < splitedword.length; i++) {
-          editedWord += splitedword[i];
-        }
-        //  return splitedword.join("");
-        return editedWord;
+        return splitedword.join("");
       }
       console.log(addFirstCharacter());
 
