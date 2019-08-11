@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="text">JavaScript Exercises - w3resource</p>
+    <div>
+      <button id="jsstyle" onclick="js_style()">Style</button>
+    </div>
+
+    <script>
+      // Clicking on the button the font, font size, and color of the paragraph text will be changed.
+
+      function js_style() {
+        let textStyle = document.getElementById("text").style;
+        textStyle.fontFamily = "Arial";
+        textStyle.fontSize = "10px";
+        textStyle.color = "blue";
+      }
+      //  console.log(js_style());
+    </script>
+  </body>
+</html>

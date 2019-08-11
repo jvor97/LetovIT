@@ -135,11 +135,20 @@
       // Expected output : "United States of America"
       function returnLongestName(array) {
         let word;
+        let longestWord;
+        let maxWordLength = 0;
         for (let i = 0; i < array.length; i++) {
           word = array[i];
-          for (let x = 0; x < word.length; x++) {}
+          if (word.length > maxWordLength) {
+            maxWordLength = word.length;
+            longestWord = word;
+          }
         }
+        return longestWord;
       }
+
+      const countries = ["Australia", "Germany", "United States of America"];
+      console.log(returnLongestName(countries));
     </script>
   </body>
 </html>
