@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. Write a JavaScript function that reverse a number.
+      // Example x = 32243;
+      // Expected Output : 34223
+
+      function reverseNumber(number) {
+        let reversedNumer = "";
+        let numberString = number.toString();
+        for (let i = numberString.length - 1; i >= 0; i--) {
+          reversedNumer += numberString[i];
+        }
+        return Number(reversedNumer);
+      }
+
+      console.log(reverseNumber(123456));
+
+      //       2. Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.
+      // Example string : 'the quick brown fox'
+      // Expected Output : 'The Quick Brown Fox '
+
+      function firstToUppercase(string) {
+        let editedString = "";
+        for (let i = 0; i < string.length; i++) {
+          let char = string[i];
+
+          if (i == 0) {
+            char = char.toUpperCase();
+          }
+          if (string[i - 1] == " ") {
+            char = char.toUpperCase();
+          }
+          editedString += char;
+        }
+        return editedString;
+      }
+      console.log(firstToUppercase("ahoj janka danka"));
+
+      //       3. Write a JavaScript function which will take an array of numbers stored and find the second lowest and second greatest numbers, respectively.
+      // Sample array : [1,2,3,4,5]
+      // Expected Output : 2,4
+      function findSecondLowAndHigh(array) {
+        let max = 0;
+        let secondMax = 0;
+        let min = array[3];
+        let secondMin = array[3];
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] > max) {
+            max = array[i];
+          }
+        }
+        for (let x = 0; x < array.length; x++) {
+          if (array[x] > secondMax && array[x] < max) {
+            secondMax = array[x];
+          }
+        }
+        for (let y = 0; y < array.length; y++) {
+          if (array[y] < min) {
+            min = array[y];
+          }
+        }
+        for (let z = 0; z < array.length; z++) {
+          if (array[z] < secondMin && array[z] > min) {
+            secondMin = array[z];
+          }
+        }
+        let result = [secondMin, secondMax];
+        return result;
+      }
+
+      let arra = [1, 3, 5, 6, 4, 6, 3, 4, 5];
+      console.log(findSecondLowAndHigh(arra));
+
+      function findSecondLowAndHigh2(array) {
+        let firstMax = 0;
+        let firstMin = array[2];
+
+        for (let i = 0; i < array.length; i++) {
+          const item = array[i];
+          if (item > firstMax) {
+            firstMax = item;
+          }
+          if (item < firstMin || item == 0) {
+            firstMin = item;
+          }
+        }
+
+        let secondMaxHelper = 0;
+        let secondMinHelper = 0;
+        for (let i = 0; i < array.length; i++) {
+          const item = array[i];
+          if (item < firstMax && item > secondMaxHelper) {
+            secondMaxHelper = item;
+          }
+          if (item > firstMin && item < secondMinHelper) {
+            secondMinHelper = item;
+          }
+        }
+
+        let max = secondMaxHelper;
+        let min = secondMinHelper;
+      }
+      let arraa = [1, 3, 5, 6, 4, 6, 3, 4, 5];
+      console.log(findSecondLowAndHigh2(arraa));
+
+      //       4. Write a JavaScript function that generates a string id (specified length) of random characters.
+      // Sample character list : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+      function generateStringId(number) {
+        const characterList =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        let randomIndex;
+        let char;
+        let randomId = "";
+        for (let x = 0; x < number; x++) {
+          for (let i = 0; i < characterList.length; i++) {
+            randomIndex = Math.floor(Math.random() * characterList.length);
+            char = characterList[randomIndex];
+          }
+          randomId += char;
+        }
+        return randomId;
+      }
+      console.log(generateStringId(5));
+
+      //       5. Write a JavaScript function that accept a list of country names as input and returns the longest country name as output.
+      // Sample function : Longest_Country_Name(["Australia", "Germany", "United States of America"])
+      // Expected output : "United States of America"
+      function returnLongestName(array) {
+        let word;
+        for (let i = 0; i < array.length; i++) {
+          word = array[i];
+          for (let x = 0; x < word.length; x++) {}
+        }
+      }
+    </script>
+  </body>
+</html>

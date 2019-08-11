@@ -20,6 +20,28 @@
         return document.getElementById("text").value;
       }
 
+      var sentence = "This     is some strinsg.";
+
+      Test(sentence);
+
+      function Test(sentence) {
+        var capitalized = "";
+        for (let i = 0; i < sentence.length; i++) {
+          if (i == 0) {
+            capitalized += sentence[i].toUpperCase();
+            continue;
+          }
+          if (sentence[i] === " ") {
+            capitalized += " ";
+            capitalized += sentence[i + 1].toUpperCase();
+            i += 1;
+            continue;
+          }
+          capitalized += sentence[i];
+        }
+        return sentence;
+      }
+
       function capitalizeFirstLetter(string) {
         string = getValue();
 
@@ -67,6 +89,25 @@
         let text = capitalizeFirstLetter();
         return (document.getElementById("demo").innerHTML = text);
       }
+
+      function capitLetter(string) {
+        //  string = getValue();
+        let newString = "";
+        for (let i = 0; i < string.length + 1; i++) {
+          let chara = string[i];
+          var first = string[0];
+          if (i == 0) {
+            chara = chara.toUpperCase();
+          }
+          if (string[i - 1] == " ") {
+            chara = chara.toUpperCase();
+          }
+          newString += chara;
+        }
+        return newString;
+      }
+
+      console.log(capitLetter("ahoj ja sam"));
     </script>
   </body>
 </html>
