@@ -8,6 +8,38 @@
   </head>
   <body>
     <script>
+      //       1. Write a JavaScript program to display the current day and time in the following format.  Go to the editor
+      // Sample Output : Today is : Tuesday.
+      // Current time is : 10 PM : 30 : 38---------------------------------------------------
+      let today = new Date().getDay();
+      let hours = new Date().getHours();
+      let min = new Date().getMinutes();
+      let sec = new Date().getSeconds();
+
+      console.log("Today is: " + today);
+      console.log("Current time is: " + hours + " : " + min + " : " + sec);
+
+      //am pm format
+      let noon = hours == 12;
+      let pm = hours >= 12;
+      let USHours = hours - (pm && !noon ? 12 : 0);
+      let time =
+        USHours + " " + (hours < 12 ? "AM" : "PM") + " " + min + " " + sec;
+
+      console.log(time);
+
+      // Excercise 4---------------------------------------------------
+      // 4. Write a JavaScript program to calculate days left until next Christmas.
+
+      let currentDay = Date.now();
+      let christDay = Date.parse("12/24/2019");
+
+      let timeBetween = Math.round(
+        (christDay - currentDay) / (1000 * 60 * 60 * 24)
+      );
+
+      console.log(timeBetween);
+
       //Excercise 6---------------------------------------------------
       //   Write a JavaScript program to get the website URL (loading page).
       var url = document.location.href;

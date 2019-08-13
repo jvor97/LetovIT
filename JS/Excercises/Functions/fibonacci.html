@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1+1 = 2     number1 + number2 = number3
+      //1+2 = 3     number1 == number2 && number2 == number3
+      //2+3 = 5
+      function fibonacci() {
+        let times = [];
+        let n1 = 1;
+        let n2 = 1;
+        let n3 = 2;
+        for (let i = 1; i < 10; i++) {
+          times.push(i);
+
+          n3 = n1 + n2;
+          console.log(n3 + "=" + n1 + "+" + n2);
+          n1 = n2;
+          n2 = n3;
+        }
+      }
+      fibonacci();
+    </script>
+  </body>
+</html>
