@@ -54,6 +54,33 @@
         return arr[number - 1];
       }
       console.log(fibonacci1(14));
+
+      // Simpler solution
+      function fibonacciRefactored(number) {
+        let array = [0, 1];
+
+        for (let i = 2; i <= number; i++) {
+          array[i] = array[i - 1] + array[i - 2];
+        }
+
+        return array[number];
+      }
+
+      console.log(fibonacciRefactored(3));
+
+      // Recursion simple but extreme inefficient !
+      function fibonacciRecursion(number)
+      {
+        if (number === 1)
+          return 1;
+
+        if (number === 2)
+          return 1;
+
+        return fibonacciRecursion(number - 1) + fibonacciRecursion(number - 2);
+      }
+
+      console.log(fibonacci1(3));
     </script>
   </body>
 </html>
